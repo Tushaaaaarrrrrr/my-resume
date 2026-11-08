@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Instrument Serif', Georgia, serif;
+    --font-sans: 'Space Grotesk', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', 'IBM Plex Mono', monospace;
+
+    --bg-paper: #F4F1EA;
+    --bg-paper-subtle: #ECE8DD;
+    --bg-paper-card: #FAF8F5;
+    --ink-black: #141613;
+    --ink-muted: #555953;
+    --ink-border: #D8D3C5;
+    --accent-orange: #E65A2D;
+    --accent-olive: #6B705C;
+  }
+
+  body {
+    background-color: #F4F1EA;
+    color: #141613;
+    font-family: var(--font-body);
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Typography Helpers */
+.font-serif-editorial {
+  font-family: var(--font-serif);
+}
+
+.font-sans-display {
+  font-family: var(--font-sans);
+}
+
+.font-mono-tech {
+  font-family: var(--font-mono);
+}
+
+/* Paper Grid & Texture Background */
+.paper-grid-bg {
+  background-image: 
+    linear-gradient(to right, rgba(20, 22, 19, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(20, 22, 19, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.paper-grain {
+  background-image: radial-gradient(rgba(20, 22, 19, 0.08) 0.75px, transparent 0.75px);
+  background-size: 16px 16px;
+}
+
+/* Precision Hairline Borders */
+.hairline-border {
+  border: 1px solid #D8D3C5;
+}
+
+.hairline-border-dark {
+  border: 1px solid #282C26;
+}
+
+/* Custom Scrollbar for editorial look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4F1EA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C9C4B5;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E65A2D;
+}
+
+/* Print Styles for Résumé Export */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
