@@ -2,7 +2,7 @@ import type { ProjectSpecimen, FieldNote, ExperienceItem } from '../types';
 
 export const PERSONAL_INFO = {
   name: 'Laxmikant',
-  title: 'Content Strategist & Narrative Architect',
+  title: 'Developer & Creative Strategist',
   academicAffiliation: 'IIT Madras — B.S. in Data Science & Applications (2024–2028)',
   location: 'Goa, India',
   coordinates: '15.2993° N, 74.1240° E',
@@ -13,7 +13,7 @@ export const PERSONAL_INFO = {
     { name: 'English', proficiency: '99%' },
     { name: 'Hindi', proficiency: '100%' },
   ],
-  status: 'Strategizing high-reach digital narratives & completing Data Science coursework at IIT Madras.',
+  status: 'Building websites and apps. Writing stories people stick around for.',
 };
 
 export const SPECIMENS: ProjectSpecimen[] = [

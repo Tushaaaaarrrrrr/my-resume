@@ -15,7 +15,7 @@ export const ContactSection: React.FC = () => {
 
   const handleDispatch = (e: React.FormEvent) => {
     e.preventDefault();
-    const mailtoUrl = `mailto:${PERSONAL_INFO.email}?subject=${encodeURIComponent(`[Inquiry] ${subjectTopic}`)}&body=${encodeURIComponent(inquiryNotes || 'Hello Laxmikant, I explored your portfolio and would like to discuss a narrative/content strategy project.')}`;
+    const mailtoUrl = `mailto:${PERSONAL_INFO.email}?subject=${encodeURIComponent(`[Inquiry] ${subjectTopic}`)}&body=${encodeURIComponent(inquiryNotes || 'Hello Laxmikant, I explored your portfolio and would like to discuss a project.')}`;
     window.location.href = mailtoUrl;
   };
 
@@ -31,10 +31,10 @@ export const ContactSection: React.FC = () => {
           </div>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <h2 className="font-serif-editorial text-4xl sm:text-5xl text-white tracking-tight">
-              Initiate a Direct Transmission
+              Got something in mind?
             </h2>
             <p className="font-mono-tech text-xs text-[#A3A7A4] max-w-md">
-              Available for ambitious content strategy advisory, high-scale digital campaigns, and forward-looking media architectures.
+              A website, an app, a story, or something that needs a bit of both. Tell me what you’re thinking.
             </p>
           </div>
         </div>
@@ -105,7 +105,7 @@ export const ContactSection: React.FC = () => {
 
             <div className="p-4 bg-[#1B1D19] border border-[#2C302B] text-xs font-mono-tech text-[#A3A7A4]">
               <span className="text-[#E65A2D] font-bold block mb-1">AVAILABILITY & CADENCE:</span>
-              <span>Currently accepting high-leverage content advisory, creator script architecture sprints, and strategic media leadership roles.</span>
+              <span>Open to website and app builds, content strategy, creator collaborations, and the interesting things in between.</span>
             </div>
           </div>
 
@@ -126,6 +126,9 @@ export const ContactSection: React.FC = () => {
                   onChange={(e) => setSubjectTopic(e.target.value)}
                   className="w-full p-2.5 bg-[#141613] text-[#F4F1EA] border border-[#3E423B] font-mono-tech text-xs focus:outline-none focus:border-[#E65A2D]"
                 >
+                  <option value="Website development">Website development</option>
+                  <option value="Mobile app development">Mobile app development</option>
+                  <option value="Custom technical build">Custom technical build</option>
                   <option value="Content Strategy & Narrative Architecture">Content Strategy & Narrative Architecture</option>
                   <option value="High-Velocity Creator Scripting Sprint">High-Velocity Creator Scripting Sprint (Tech/Product)</option>
                   <option value="Institutional / Festival Media Architecture">Institutional / Festival Media Architecture</option>

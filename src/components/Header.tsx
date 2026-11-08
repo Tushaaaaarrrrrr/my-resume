@@ -17,7 +17,7 @@ export const Header: React.FC<HeaderProps> = ({ currentLens, onToggleLens, onOpe
         <div className="flex items-center gap-3">
           <span className="flex items-center gap-1.5">
             <span className="w-2 h-2 rounded-full bg-[#E65A2D] animate-pulse"></span>
-            <span className="font-medium text-[#141613]">ACTIVE DISPATCH</span>
+            <span className="font-medium text-[#141613]">BUILDING & CREATING</span>
           </span>
           <span className="hidden md:inline text-[#A3A7A4]">//</span>
           <span className="hidden md:inline truncate">{PERSONAL_INFO.status}</span>
@@ -51,7 +51,7 @@ export const Header: React.FC<HeaderProps> = ({ currentLens, onToggleLens, onOpe
               </span>
             </div>
             <p className="font-sans-display text-xs text-[#555953] tracking-wide mt-0.5">
-              Content Strategist & Narrative Architect // BS in Data Science & Applications
+              Websites, apps & stories worth sticking around for
             </p>
           </a>
         </div>
@@ -60,36 +60,39 @@ export const Header: React.FC<HeaderProps> = ({ currentLens, onToggleLens, onOpe
         <div className="flex flex-wrap items-center gap-3 sm:gap-5">
           {/* Section Anchors */}
           <nav className="hidden lg:flex items-center gap-4 font-mono-tech text-xs tracking-wider text-[#555953]">
-            <a href="#specimens" className="hover:text-[#141613] transition-colors">01.SPECIMENS</a>
-            <a href="#how-i-think" className="hover:text-[#141613] transition-colors">02.FIELD_NOTES</a>
-            <a href="#lab" className="hover:text-[#141613] transition-colors">03.LAB</a>
-            <a href="#resume" className="hover:text-[#141613] transition-colors">04.TIMELINE</a>
-            <a href="#contact" className="hover:text-[#141613] transition-colors">05.DISPATCH</a>
+            <a href="#builds" className="hover:text-[#141613] transition-colors">Builds</a>
+            <a href="#specimens" className="hover:text-[#141613] transition-colors">Creative</a>
+            <a href="#how-i-think" className="hover:text-[#141613] transition-colors">Thinking</a>
+            <a href="#lab" className="hover:text-[#141613] transition-colors">Lab</a>
+            <a href="#resume" className="hover:text-[#141613] transition-colors">Experience</a>
+            <a href="#contact" className="hover:text-[#141613] transition-colors">Contact</a>
           </nav>
 
           {/* Dual Lens Mode Switcher */}
           <div className="flex items-center border border-[#D8D3C5] bg-[#FAF8F5] p-0.5">
             <button
               onClick={() => onToggleLens('editorial')}
+              aria-pressed={currentLens === 'editorial'}
               className={`px-2.5 py-1 text-[11px] font-mono-tech uppercase transition-all ${
                 currentLens === 'editorial'
                   ? 'bg-[#141613] text-[#F4F1EA] font-semibold'
                   : 'text-[#555953] hover:text-[#141613]'
               }`}
-              title="Focus on narrative voice, story structure, and script hooks"
+              title="Content, scripts, and creator strategy"
             >
-              Editorial Lens
+              Right brain
             </button>
             <button
               onClick={() => onToggleLens('telemetry')}
+              aria-pressed={currentLens === 'telemetry'}
               className={`px-2.5 py-1 text-[11px] font-mono-tech uppercase transition-all flex items-center gap-1 ${
                 currentLens === 'telemetry'
                   ? 'bg-[#E65A2D] text-white font-semibold'
                   : 'text-[#555953] hover:text-[#141613]'
               }`}
-              title="Inspect metrics, retention drop-offs, reach algorithms, and data factors"
+              title="Websites, apps, and technical builds"
             >
-              <span>Telemetry X-Ray</span>
+              <span>Left brain</span>
             </button>
           </div>
 

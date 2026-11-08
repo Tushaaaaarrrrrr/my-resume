@@ -9,7 +9,7 @@ export const LabExperiments: React.FC = () => {
   // Computed metrics
   const projectedSwipeLoss = Math.max(8, Math.round(100 - hookStrength * 0.9));
   const estimatedAverageWatchPercentage = Math.min(94, Math.round((hookStrength * 0.4 + pacingVelocity * 0.4 + payoffTiming * 0.2)));
-  const viralProbability = estimatedAverageWatchPercentage > 75 ? 'HIGH (>80%)' : estimatedAverageWatchPercentage > 60 ? 'MODERATE (50-70%)' : 'LOW (<40%)';
+  const modelSignal = estimatedAverageWatchPercentage > 75 ? 'STRONG' : estimatedAverageWatchPercentage > 60 ? 'MODERATE' : 'LOW';
 
   // Experiment 2: Headline tester
   const [headlineInput, setHeadlineInput] = useState<string>(
@@ -31,7 +31,7 @@ export const LabExperiments: React.FC = () => {
               Interactive Content Systems & Heuristics
             </h2>
             <p className="font-mono-tech text-xs text-[#555953] max-w-md">
-              Working models developed to test and validate audience psychology, retention decay, and algorithmic distribution parameters.
+              Explore story pacing and headline clarity with interactive, illustrative models.
             </p>
           </div>
         </div>
@@ -46,8 +46,20 @@ export const LabExperiments: React.FC = () => {
             </div>
 
             <p className="font-sans-display text-xs sm:text-sm text-[#3E423B] mb-6">
-              Adjust content architecture levers to observe projected short-form video retention decay curves based on empirical data from Tech Burner and Paradox IITM campaigns.
+              Adjust the story levers and watch the curve respond. This is an illustrative model, not measured campaign analytics or a performance forecast.
             </p>
+
+            <div className="retention-plot">
+              <div className="retention-plot-heading"><span>Attention over time</span><span>Illustrative model</span></div>
+              <svg viewBox="0 0 600 180" role="img" aria-label={`Illustrative retention curve ending at ${estimatedAverageWatchPercentage} percent`}>
+                <defs><linearGradient id="retention-fill" x1="0" y1="0" x2="0" y2="1"><stop stopColor="#E65A2D" stopOpacity=".28" /><stop offset="1" stopColor="#E65A2D" stopOpacity="0" /></linearGradient></defs>
+                <path d="M20 30H580M20 90H580M20 150H580" stroke="#D8D3C5" strokeDasharray="3 6" fill="none" />
+                <path d={`M20 20 C110 ${140 - hookStrength}, 220 ${170 - pacingVelocity}, 580 ${170 - estimatedAverageWatchPercentage * 1.5} L580 165H20Z`} fill="url(#retention-fill)" />
+                <path className="retention-curve" d={`M20 20 C110 ${140 - hookStrength}, 220 ${170 - pacingVelocity}, 580 ${170 - estimatedAverageWatchPercentage * 1.5}`} fill="none" stroke="#E65A2D" strokeWidth="3" />
+                <circle cx="580" cy={170 - estimatedAverageWatchPercentage * 1.5} r="5" fill="#E65A2D" />
+              </svg>
+              <div className="retention-axis"><span>First impression</span><span>The payoff</span></div>
+            </div>
 
             {/* Interactive Sliders */}
             <div className="space-y-5 mb-8">
@@ -58,6 +70,7 @@ export const LabExperiments: React.FC = () => {
                 </div>
                 <input
                   type="range"
+                  aria-label="Hook strength"
                   min="20"
                   max="100"
                   value={hookStrength}
@@ -73,6 +86,7 @@ export const LabExperiments: React.FC = () => {
                 </div>
                 <input
                   type="range"
+                  aria-label="Pacing velocity"
                   min="20"
                   max="100"
                   value={pacingVelocity}
@@ -88,6 +102,7 @@ export const LabExperiments: React.FC = () => {
                 </div>
                 <input
                   type="range"
+                  aria-label="Payoff timing"
                   min="20"
                   max="100"
                   value={payoffTiming}
@@ -104,12 +119,12 @@ export const LabExperiments: React.FC = () => {
                 <div className="font-serif-editorial text-2xl text-[#E65A2D] mt-1">{projectedSwipeLoss}%</div>
               </div>
               <div className="border-x border-[#2C302B]">
-                <div className="font-mono-tech text-[10px] text-[#8E938A]">EST. COMPLETION</div>
+                <div className="font-mono-tech text-[10px] text-[#8E938A]">MODEL COMPLETION</div>
                 <div className="font-serif-editorial text-2xl text-white mt-1">{estimatedAverageWatchPercentage}%</div>
               </div>
               <div>
-                <div className="font-mono-tech text-[10px] text-[#8E938A]">ALGO VELOCITY</div>
-                <div className="font-mono-tech text-xs text-[#F4F1EA] font-bold mt-2">{viralProbability}</div>
+                <div className="font-mono-tech text-[10px] text-[#8E938A]">MODEL SIGNAL</div>
+                <div className="font-mono-tech text-xs text-[#F4F1EA] font-bold mt-2">{modelSignal}</div>
               </div>
             </div>
           </div>
@@ -127,6 +142,7 @@ export const LabExperiments: React.FC = () => {
               </p>
 
               <textarea
+                aria-label="Headline to analyze"
                 value={headlineInput}
                 onChange={(e) => setHeadlineInput(e.target.value)}
                 rows={4}
@@ -146,7 +162,7 @@ export const LabExperiments: React.FC = () => {
                 </div>
                 <div className="flex justify-between py-1 border-b border-[#E5E1D5]">
                   <span>COGNITIVE LOAD:</span>
-                  <span className="text-[#6B705C] font-semibold">OPTIMAL (UNDER 20 WORDS)</span>
+                  <span className="text-[#6B705C] font-semibold">{headlineInput.trim() === '' ? 'ADD A HEADLINE' : headlineInput.trim().split(/\s+/).length <= 20 ? 'CONCISE (20 WORDS OR FEWER)' : 'LONG (OVER 20 WORDS)'}</span>
                 </div>
               </div>
             </div>

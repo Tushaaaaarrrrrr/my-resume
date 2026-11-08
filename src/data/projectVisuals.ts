@@ -1,0 +1,38 @@
+export const PROJECT_VISUALS = [
+  {
+    id: 'paradox-iitm',
+    name: 'Paradox, IIT Madras',
+    headline: ['Make them', 'feel something.'],
+    theme: 'festival',
+    caption: 'Culture becomes a story worth sharing.',
+    link: 'https://www.instagram.com/paradox_iitmadras/',
+    linkLabel: 'Explore Paradox on Instagram',
+  },
+  {
+    id: 'brightsoo-techburner',
+    name: 'Brightsoo Creator Club',
+    headline: ['Every frame.', 'A reason to stay.'],
+    theme: 'creator',
+    caption: 'From a first-line hook to the final frame.',
+    link: 'https://www.youtube.com/@TechBurner/search?query=ipl',
+    linkLabel: 'Explore the creator channel',
+  },
+  {
+    id: 'genz-iitian',
+    name: 'GenZ IITian',
+    headline: ['Less noise.', 'More belonging.'],
+    theme: 'community',
+    caption: 'Useful stories. A community that comes back.',
+    link: 'https://genziitian.in/',
+    linkLabel: 'Visit GenZ IITian',
+  },
+  {
+    id: 'imun-global',
+    name: 'International Model United Nations',
+    headline: ['One story.', 'Beyond borders.'],
+    theme: 'global',
+    caption: 'Turning a global audience into a conversation.',
+    link: 'https://www.linkedin.com/in/laxmikant-iitm/',
+    linkLabel: 'View experience on LinkedIn',
+  },
+];

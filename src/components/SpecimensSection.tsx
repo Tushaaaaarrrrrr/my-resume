@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import type { ViewLens, ProjectSpecimen } from '../types';
+import { PROJECT_VISUALS } from '../data/projectVisuals';
 import { SPECIMENS } from '../data/portfolioData';
 import { SpecimenModal } from './SpecimenModal';
-import { FileSearch, Sparkles, Activity } from 'lucide-react';
+import { ProjectArtwork } from './ProjectArtwork';
+import { FileSearch, Sparkles, Activity, ArrowUpRight } from 'lucide-react';
 
 interface SpecimensSectionProps {
   lens: ViewLens;
@@ -20,7 +22,7 @@ export const SpecimensSection: React.FC<SpecimensSectionProps> = ({ lens }) => {
           <div>
             <div className="flex items-center gap-2 font-mono-tech text-xs text-[#E65A2D] uppercase tracking-wider mb-2">
               <span className="w-2 h-2 bg-[#E65A2D] inline-block"></span>
-              <span>INDEX 01 // SELECTED WORK SPECIMENS</span>
+              <span>THE RIGHT-BRAIN DEPARTMENT // CREATIVE WORK</span>
             </div>
             <h2 className="font-serif-editorial text-4xl sm:text-5xl text-[#141613] tracking-tight">
               Four Case Studies in Narrative Scale
@@ -44,11 +46,19 @@ export const SpecimensSection: React.FC<SpecimensSectionProps> = ({ lens }) => {
 
         {/* The 4 Specimen Dossiers */}
         <div className="space-y-12">
-          {SPECIMENS.map((specimen) => (
+          {SPECIMENS.map((specimen, index) => (
             <article
               key={specimen.id}
-              className="border border-[#D8D3C5] bg-[#FAF8F5] p-6 sm:p-10 relative transition-all hover:border-[#141613]"
+              id={specimen.id}
+              className="specimen-card border border-[#D8D3C5] bg-[#FAF8F5] relative transition-all hover:border-[#141613]"
             >
+              <a className={`project-cover theme-${PROJECT_VISUALS[index].theme}`} href={PROJECT_VISUALS[index].link} target="_blank" rel="noopener noreferrer" aria-label={PROJECT_VISUALS[index].linkLabel}>
+                <ProjectArtwork theme={PROJECT_VISUALS[index].theme} />
+                <div className="project-cover-top"><span>{specimen.title}</span><ArrowUpRight size={22} /></div>
+                <div className="project-cover-title font-serif-editorial">{PROJECT_VISUALS[index].headline.join(' ')}</div>
+                <div className="project-cover-bottom"><span>{PROJECT_VISUALS[index].linkLabel}</span><span>Original graphic study</span></div>
+              </a>
+              <div className="p-6 sm:p-10">
               {/* Specimen Index Header Bar */}
               <div className="flex flex-wrap items-center justify-between border-b border-[#E5E1D5] pb-4 mb-6 text-xs font-mono-tech text-[#555953] gap-2">
                 <div className="flex items-center gap-3">
@@ -191,6 +201,7 @@ export const SpecimensSection: React.FC<SpecimensSectionProps> = ({ lens }) => {
                 </button>
               </div>
 
+              </div>
             </article>
           ))}
         </div>

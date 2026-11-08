@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import type { ViewLens } from './types';
 import { Header } from './components/Header';
+import { BuildSection } from './components/BuildSection';
 import { Hero } from './components/Hero';
 import { SpecimensSection } from './components/SpecimensSection';
 import { HowIThink } from './components/HowIThink';
@@ -17,7 +18,7 @@ export function App() {
   const handleNavigate = (sectionId: string) => {
     const el = document.getElementById(sectionId);
     if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
+      el.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
     }
   };
 
@@ -35,11 +36,13 @@ export function App() {
         {/* Hero Section with Interactive Schematic Centerpiece */}
         <Hero
           lens={currentLens}
+          onChangeLens={setCurrentLens}
           onNavigate={handleNavigate}
           onOpenResumeModal={() => setIsResumeModalOpen(true)}
         />
 
         {/* 01 Selected Work Specimens (Paradox IITM, Tech Burner, GenZ, IMUN) */}
+        <BuildSection />
         <SpecimensSection lens={currentLens} />
 
         {/* 02 Field Notes: How I Think */}
