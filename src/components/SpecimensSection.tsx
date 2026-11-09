@@ -22,10 +22,10 @@ export const SpecimensSection: React.FC<SpecimensSectionProps> = ({ lens }) => {
           <div>
             <div className="flex items-center gap-2 font-mono-tech text-xs text-[#E65A2D] uppercase tracking-wider mb-2">
               <span className="w-2 h-2 bg-[#E65A2D] inline-block"></span>
-              <span>THE RIGHT-BRAIN DEPARTMENT // CREATIVE WORK</span>
+              <span>CONTENT & STRATEGY</span>
             </div>
             <h2 className="font-serif-editorial text-4xl sm:text-5xl text-[#141613] tracking-tight">
-              Four Case Studies in Narrative Scale
+              Selected Content Work
             </h2>
           </div>
 
@@ -33,12 +33,12 @@ export const SpecimensSection: React.FC<SpecimensSectionProps> = ({ lens }) => {
             {lens === 'editorial' ? (
               <span className="flex items-center gap-1.5 text-[#141613]">
                 <Sparkles className="w-3.5 h-3.5 text-[#E65A2D]" />
-                <span>Showing Editorial Lens: Hook craft, tone calibration, and script architecture.</span>
+                <span>Editorial view: hook craft, tone and script structure.</span>
               </span>
             ) : (
               <span className="flex items-center gap-1.5 text-[#E65A2D]">
                 <Activity className="w-3.5 h-3.5 text-[#E65A2D]" />
-                <span>Showing Telemetry Lens: Retention loss functions, algorithmic vectors, and verified numbers.</span>
+                <span>Metrics view: reach, retention and results.</span>
               </span>
             )}
           </div>
@@ -56,7 +56,7 @@ export const SpecimensSection: React.FC<SpecimensSectionProps> = ({ lens }) => {
                 <ProjectArtwork theme={PROJECT_VISUALS[index].theme} />
                 <div className="project-cover-top"><span>{specimen.title}</span><ArrowUpRight size={22} /></div>
                 <div className="project-cover-title font-serif-editorial">{PROJECT_VISUALS[index].headline.join(' ')}</div>
-                <div className="project-cover-bottom"><span>{PROJECT_VISUALS[index].linkLabel}</span><span>Original graphic study</span></div>
+                <div className="project-cover-bottom"><span>{PROJECT_VISUALS[index].linkLabel}</span><span>Original artwork</span></div>
               </a>
               <div className="p-6 sm:p-10">
               {/* Specimen Index Header Bar */}
@@ -105,7 +105,7 @@ export const SpecimensSection: React.FC<SpecimensSectionProps> = ({ lens }) => {
                   </div>
                   <div className="flex justify-between">
                     <span className="text-[#555953]">STATUS:</span>
-                    <span className="text-[#6B705C] font-semibold">VERIFIED</span>
+                    <span className="text-[#6B705C] font-semibold">REPORTED</span>
                   </div>
                 </div>
               </div>

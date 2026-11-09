@@ -27,7 +27,7 @@ export const ContactSection: React.FC = () => {
         <div className="border-b border-[#2C302B] pb-6 mb-12">
           <div className="flex items-center gap-2 font-mono-tech text-xs text-[#E65A2D] uppercase tracking-wider mb-2">
             <span className="w-2 h-2 bg-[#E65A2D] inline-block"></span>
-            <span>INDEX 05 // DIRECT FREQUENCY & DISPATCH</span>
+            <span>CONTACT</span>
           </div>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <h2 className="font-serif-editorial text-4xl sm:text-5xl text-white tracking-tight">
@@ -45,7 +45,7 @@ export const ContactSection: React.FC = () => {
           <div className="lg:col-span-5 space-y-6">
             <div className="p-6 bg-[#262925] border border-[#3E423B] space-y-4 font-mono-tech text-xs">
               <div className="text-[10px] text-[#8E938A] uppercase tracking-wider border-b border-[#3E423B] pb-2">
-                COORDINATES & VERIFIED CHANNELS
+                CONTACT DETAILS
               </div>
 
               {/* Email */}
@@ -112,8 +112,8 @@ export const ContactSection: React.FC = () => {
           {/* Quick Dispatch Composer (7 cols) */}
           <div className="lg:col-span-7 p-6 sm:p-8 bg-[#262925] border border-[#3E423B]">
             <div className="flex items-center justify-between border-b border-[#3E423B] pb-3 mb-6">
-              <span className="font-mono-tech text-xs text-[#E65A2D] font-bold">DISPATCH COMPOSER</span>
-              <span className="font-mono-tech text-[10px] text-[#8E938A]">ONE-CLICK EMAIL DISPATCH</span>
+              <span className="font-mono-tech text-xs text-[#E65A2D] font-bold">SEND A MESSAGE</span>
+              <span className="font-mono-tech text-[10px] text-[#8E938A]">OPENS YOUR EMAIL APP</span>
             </div>
 
             <form onSubmit={handleDispatch} className="space-y-4">

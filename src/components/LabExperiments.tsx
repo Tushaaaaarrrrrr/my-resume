@@ -24,11 +24,11 @@ export const LabExperiments: React.FC = () => {
         <div className="border-b border-[#D8D3C5] pb-6 mb-12">
           <div className="flex items-center gap-2 font-mono-tech text-xs text-[#E65A2D] uppercase tracking-wider mb-2">
             <span className="w-2 h-2 bg-[#E65A2D] inline-block"></span>
-            <span>INDEX 03 // THE LABORATORY & INTERACTIVE PROTOTYPES</span>
+            <span>INTERACTIVE TOOLS</span>
           </div>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <h2 className="font-serif-editorial text-4xl sm:text-5xl text-[#141613] tracking-tight">
-              Interactive Content Systems & Heuristics
+              Interactive Content Tools
             </h2>
             <p className="font-mono-tech text-xs text-[#555953] max-w-md">
               Explore story pacing and headline clarity with interactive, illustrative models.
@@ -41,8 +41,8 @@ export const LabExperiments: React.FC = () => {
           {/* Experiment 01: Retention Simulator (8 cols) */}
           <div className="lg:col-span-7 border border-[#D8D3C5] bg-[#F4F1EA] p-6 sm:p-8">
             <div className="flex items-center justify-between border-b border-[#D8D3C5] pb-3 mb-6">
-              <span className="font-mono-tech text-xs text-[#E65A2D] font-bold">EXP // 01</span>
-              <span className="font-mono-tech text-xs text-[#141613] font-semibold">RETENTION DECAY SIMULATOR</span>
+              <span className="font-mono-tech text-xs text-[#E65A2D] font-bold">TOOL 01</span>
+              <span className="font-mono-tech text-xs text-[#141613] font-semibold">RETENTION MODEL</span>
             </div>
 
             <p className="font-sans-display text-xs sm:text-sm text-[#3E423B] mb-6">
@@ -133,8 +133,8 @@ export const LabExperiments: React.FC = () => {
           <div className="lg:col-span-5 border border-[#D8D3C5] bg-[#F4F1EA] p-6 sm:p-8 flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between border-b border-[#D8D3C5] pb-3 mb-6">
-                <span className="font-mono-tech text-xs text-[#E65A2D] font-bold">EXP // 02</span>
-                <span className="font-mono-tech text-xs text-[#141613] font-semibold">HEADLINE COGNITIVE STRESS-TEST</span>
+                <span className="font-mono-tech text-xs text-[#E65A2D] font-bold">TOOL 02</span>
+                <span className="font-mono-tech text-xs text-[#141613] font-semibold">HEADLINE CHECKER</span>
               </div>
 
               <p className="font-sans-display text-xs text-[#555953] mb-4">
@@ -161,7 +161,7 @@ export const LabExperiments: React.FC = () => {
                   <span className="text-[#141613] font-bold">~{(headlineInput.trim().split(/\s+/).filter(Boolean).length / 3.5).toFixed(1)}s</span>
                 </div>
                 <div className="flex justify-between py-1 border-b border-[#E5E1D5]">
-                  <span>COGNITIVE LOAD:</span>
+                  <span>READABILITY:</span>
                   <span className="text-[#6B705C] font-semibold">{headlineInput.trim() === '' ? 'ADD A HEADLINE' : headlineInput.trim().split(/\s+/).length <= 20 ? 'CONCISE (20 WORDS OR FEWER)' : 'LONG (OVER 20 WORDS)'}</span>
                 </div>
               </div>

@@ -5,8 +5,8 @@ export function BuildSection() {
     <section id="builds" className="build-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 build-layout">
         <div className="build-copy">
-          <span className="workbench-label"><Code2 size={16} /> The left-brain department</span>
-          <h2>You imagine it.<br />I figure out<br /><em>the technical bit.</em></h2>
+          <span className="workbench-label"><Code2 size={16} /> Engineering</span>
+          <h2>From idea<br />to working<br /><em>product.</em></h2>
           <p>Websites, mobile apps, and the systems behind them. I like taking an idea out of a conversation and putting it on a screen.</p>
           <div className="build-capabilities"><span>Websites</span><span>Mobile apps</span><span>Custom builds</span></div>
           <a href="#contact">Tell me what you’re building <ArrowUpRight size={18} /></a>

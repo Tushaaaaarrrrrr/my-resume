@@ -88,7 +88,7 @@ export const PrintResumeModal: React.FC<PrintResumeModalProps> = ({ isOpen, onCl
               Professional Summary
             </h2>
             <p className="text-xs sm:text-sm text-neutral-700 leading-relaxed">
-              Creative and detail-oriented Content Strategist and Data Science undergraduate at IIT Madras with 2+ years of verified experience planning, developing, and optimizing high-impact content across multiple digital platforms. Proven record scaling organic reach to millions on Instagram for Paradox IIT Madras and managing high-velocity creator scripting workflows under Tech Burner’s Brightsoo Creator Club. Experienced in audience retention modeling, cross-functional campaign execution, and timely delivery.
+              Creative and detail-oriented Content Strategist and Data Science undergraduate at IIT Madras with 2+ years of experience planning, developing, and optimizing high-impact content across multiple digital platforms. Proven record scaling organic reach to millions on Instagram for Paradox IIT Madras and managing high-velocity creator scripting workflows under Tech Burner’s Brightsoo Creator Club. Experienced in audience retention modeling, cross-functional campaign execution, and timely delivery.
             </p>
           </div>
 

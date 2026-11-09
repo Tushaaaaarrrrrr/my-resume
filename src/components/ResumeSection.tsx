@@ -16,10 +16,10 @@ export const ResumeSection: React.FC<ResumeSectionProps> = ({ onOpenPrintModal }
           <div>
             <div className="flex items-center gap-2 font-mono-tech text-xs text-[#E65A2D] uppercase tracking-wider mb-2">
               <span className="w-2 h-2 bg-[#E65A2D] inline-block"></span>
-              <span>INDEX 04 // VERIFIED CAREER ARCHIVE & EDUCATION</span>
+              <span>EXPERIENCE & EDUCATION</span>
             </div>
             <h2 className="font-serif-editorial text-4xl sm:text-5xl text-[#141613] tracking-tight">
-              Curriculum Vitae & Verified Experience
+              Experience
             </h2>
           </div>
 
@@ -77,7 +77,7 @@ export const ResumeSection: React.FC<ResumeSectionProps> = ({ onOpenPrintModal }
                   <div className="font-bold text-sm text-[#141613]">{item.organization}</div>
                   <div className="text-[#E65A2D] font-medium">{item.role}</div>
                   <div className="text-[11px] text-[#8E938A] pt-2">
-                    <span className="font-semibold text-[#141613]">VERIFIED METRIC:</span> {item.verifiedMetric}
+                    <span className="font-semibold text-[#141613]">RESULT:</span> {item.verifiedMetric}
                   </div>
                 </div>
 

@@ -10,14 +10,14 @@ export const HowIThink: React.FC = () => {
         <div className="border-b border-[#D8D3C5] pb-6 mb-12">
           <div className="flex items-center gap-2 font-mono-tech text-xs text-[#E65A2D] uppercase tracking-wider mb-2">
             <span className="w-2 h-2 bg-[#E65A2D] inline-block"></span>
-            <span>INDEX 02 // COGNITIVE ARCHITECTURE</span>
+            <span>APPROACH</span>
           </div>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <h2 className="font-serif-editorial text-4xl sm:text-5xl text-[#141613] tracking-tight">
-              Field Notes: How I Think & Engineer Stories
+              How I Work
             </h2>
             <p className="font-mono-tech text-xs text-[#555953] max-w-md">
-              Four fundamental principles forged at the intersection of IIT Madras analytical science and high-velocity creator distribution.
+              Four principles from analytical training at IIT Madras and hands-on creator work.
             </p>
           </div>
         </div>
@@ -33,7 +33,7 @@ export const HowIThink: React.FC = () => {
                 {/* Note Identification Tag */}
                 <div className="flex items-center justify-between border-b border-[#E5E1D5] pb-3 mb-4">
                   <span className="font-mono-tech text-xs text-[#E65A2D] font-bold">{note.number}</span>
-                  <span className="font-mono-tech text-[10px] text-[#8E938A] uppercase">DISPATCH RECORD</span>
+                  <span className="font-mono-tech text-[10px] text-[#8E938A] uppercase">PRINCIPLE</span>
                 </div>
 
                 {/* Title */}
@@ -59,7 +59,7 @@ export const HowIThink: React.FC = () => {
               {/* Bottom Axiom & Empirical Correlation */}
               <div className="mt-6 pt-4 border-t border-[#E5E1D5] space-y-2">
                 <div className="flex items-center gap-2">
-                  <span className="font-mono-tech text-[10px] uppercase text-[#141613] font-bold">OPERATING AXIOM:</span>
+                  <span className="font-mono-tech text-[10px] uppercase text-[#141613] font-bold">TAKEAWAY:</span>
                   <span className="font-sans-display text-xs text-[#E65A2D] font-medium">{note.keyPrinciple}</span>
                 </div>
                 <div className="font-mono-tech text-[10px] text-[#8E938A]">

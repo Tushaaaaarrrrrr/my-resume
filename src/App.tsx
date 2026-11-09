@@ -9,6 +9,7 @@ import { LabExperiments } from './components/LabExperiments';
 import { ResumeSection } from './components/ResumeSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
+import { MotionLayer } from './components/MotionLayer';
 import { PrintResumeModal } from './components/PrintResumeModal';
 
 export function App() {
@@ -24,6 +25,8 @@ export function App() {
 
   return (
     <div className="min-h-screen bg-[#F4F1EA] text-[#141613] selection:bg-[#E65A2D] selection:text-white">
+      <MotionLayer />
+
       {/* Editorial Navigation Masthead */}
       <Header
         currentLens={currentLens}

@@ -25,13 +25,13 @@ export function MotionStudio({ lens, onNavigate }: {
     <div className={`motion-studio ${playing ? 'is-playing' : ''}`}>
       <div className="studio-chrome">
         <span className="studio-dots" aria-hidden="true"><i /><i /><i /></span>
-        <span>The narrative desk</span>
+        <span>Content studio</span>
         <ScanLine size={14} aria-hidden="true" />
       </div>
 
       <div className={`studio-scene theme-${visual.theme}`}>
         <ProjectArtwork key={visual.id} theme={visual.theme} />
-        <div className="studio-scene-top"><span>Concept motion study</span><span>Story / {String(scene + 1).padStart(2, '0')}</span></div>
+        <div className="studio-scene-top"><span>Concept preview</span><span>Story / {String(scene + 1).padStart(2, '0')}</span></div>
         <div className="studio-frame" aria-hidden="true"><i /><i /><i /><i /></div>
 
         <div key={`${scene}-${lens}`} className="studio-type">
@@ -46,7 +46,7 @@ export function MotionStudio({ lens, onNavigate }: {
 
         <div className="studio-scene-bottom">
           <div className="studio-wave" aria-hidden="true">{[9, 19, 12, 28, 16, 35, 22, 13, 30, 18, 25, 11].map((height, i) => <i key={i} style={{ height, animationDelay: `${i * -0.11}s` }} />)}</div>
-          <span>An original motion study</span>
+          <span>Original concept</span>
         </div>
       </div>
 
@@ -55,7 +55,7 @@ export function MotionStudio({ lens, onNavigate }: {
           <button onClick={() => setPlaying(!playing)} aria-label={playing ? 'Pause motion' : 'Play motion'} aria-pressed={playing}>
             {playing ? <Pause size={15} /> : <Play size={15} />}
           </button>
-          <span>Move the playhead. Shape the story.</span>
+          <span>Drag to preview</span>
           <span className="studio-time">{(scrub * 0.15).toFixed(1)}s / 15s</span>
         </div>
         <div className="timeline-ruler" aria-hidden="true"><span>00:00</span><span>00:05</span><span>00:10</span><span>00:15</span></div>
